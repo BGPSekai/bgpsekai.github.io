@@ -1,0 +1,7 @@
+@font-face {
+  font-family: DroidSans;
+  src: url(Fonts/DroidSansFallback.ttf );
+}
+body {
+  font-family: DroidSans;
+}
