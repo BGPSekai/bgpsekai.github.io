@@ -13,6 +13,7 @@ let Grid = AMUI.Grid,
   Col = AMUI.Col,
   Nav = AMUI.Nav,
   NavItem = AMUI.NavItem,
+  Sticky = AMUI.Sticky,
   Container = AMUI.Container;
 
 class Index extends React.Component {
@@ -20,11 +21,9 @@ class Index extends React.Component {
   render() {
     return (
 	  <div id="root">
-		<Grid className="doc-g">
-		  <Container className=".am-container">
-			<NavBar _={_} />
-		  </Container>
-		</Grid>
+	  	<Sticky top={0}>
+	    	<NavBar _={_}/>
+	    </Sticky>
 	    <Grid className="doc-g">
 	      <Container className=".am-container">
 	        <Col sm={12}>{_('just_do_it')}</Col>
