@@ -75,9 +75,17 @@
 
 	var _Navbar2 = _interopRequireDefault(_Navbar);
 
-	var _WorkContent = __webpack_require__(248);
+	var _SkillContent = __webpack_require__(248);
+
+	var _SkillContent2 = _interopRequireDefault(_SkillContent);
+
+	var _WorkContent = __webpack_require__(249);
 
 	var _WorkContent2 = _interopRequireDefault(_WorkContent);
+
+	var _Members = __webpack_require__(250);
+
+	var _Members2 = _interopRequireDefault(_Members);
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -135,13 +143,29 @@
 																	_react2.default.createElement(
 																			'p',
 																			{ id: 'title' },
-																			_('just_do_it')
+																			_('just_do_it'),
+																			_react2.default.createElement('span', { className: 'cursor-blink' })
 																	)
 															)
 													)
 											)
 									),
-									_react2.default.createElement(_WorkContent2.default, { _: _ })
+									_react2.default.createElement(_SkillContent2.default, { _: _ }),
+									_react2.default.createElement(_WorkContent2.default, { _: _ }),
+									_react2.default.createElement(_Members2.default, { _: _ }),
+									_react2.default.createElement(
+											'footer',
+											{ className: 'am-footer am-footer-default' },
+											_react2.default.createElement(
+													'div',
+													{ className: 'am-footer-miscs' },
+													_react2.default.createElement(
+															'p',
+															null,
+															'©2016,YEEE!!!'
+													)
+											)
+									)
 							);
 					}
 			}]);
@@ -29585,7 +29609,8 @@
 	    Topbar = _amazeuiReact2.default.Topbar,
 	    CollapsibleNav = _amazeuiReact2.default.CollapsibleNav,
 	    NavItem = _amazeuiReact2.default.NavItem,
-	    Sticky = _amazeuiReact2.default.Sticky;
+	    Sticky = _amazeuiReact2.default.Sticky,
+	    ScrollSpyNav = _amazeuiReact2.default.ScrollSpyNav;
 
 	var NavBar = function (_React$Component) {
 		_inherits(NavBar, _React$Component);
@@ -29666,16 +29691,16 @@
 	    AvgGrid = _amazeuiReact2.default.AvgGrid,
 	    Image = _amazeuiReact2.default.Image;
 
-	var WorkContent = function (_React$Component) {
-		_inherits(WorkContent, _React$Component);
+	var SkillContent = function (_React$Component) {
+		_inherits(SkillContent, _React$Component);
 
-		function WorkContent() {
-			_classCallCheck(this, WorkContent);
+		function SkillContent() {
+			_classCallCheck(this, SkillContent);
 
-			return _possibleConstructorReturn(this, Object.getPrototypeOf(WorkContent).apply(this, arguments));
+			return _possibleConstructorReturn(this, Object.getPrototypeOf(SkillContent).apply(this, arguments));
 		}
 
-		_createClass(WorkContent, [{
+		_createClass(SkillContent, [{
 			key: 'render',
 			value: function render() {
 				return _react2.default.createElement(
@@ -29728,10 +29753,236 @@
 			}
 		}]);
 
-		return WorkContent;
+		return SkillContent;
+	}(_react2.default.Component);
+
+	exports.default = SkillContent;
+
+/***/ },
+/* 249 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
+					value: true
+	});
+
+	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+	var _react = __webpack_require__(2);
+
+	var _react2 = _interopRequireDefault(_react);
+
+	var _amazeuiReact = __webpack_require__(160);
+
+	var _amazeuiReact2 = _interopRequireDefault(_amazeuiReact);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+	var Container = _amazeuiReact2.default.Container,
+	    AvgGrid = _amazeuiReact2.default.AvgGrid,
+	    Image = _amazeuiReact2.default.Image;
+
+	var WorkContent = function (_React$Component) {
+					_inherits(WorkContent, _React$Component);
+
+					function WorkContent(props) {
+									_classCallCheck(this, WorkContent);
+
+									var _this = _possibleConstructorReturn(this, Object.getPrototypeOf(WorkContent).call(this, props));
+
+									_this.displayName = 'WorkContent';
+									return _this;
+					}
+
+					_createClass(WorkContent, [{
+									key: 'render',
+									value: function render() {
+													return _react2.default.createElement(
+																	'div',
+																	{ id: 'works-block', className: 'main-block' },
+																	_react2.default.createElement(
+																					Container,
+																					null,
+																					_react2.default.createElement(
+																									'h2',
+																									{ className: 'font-title' },
+																									this.props._('works_title')
+																					),
+																					_react2.default.createElement(
+																									AvgGrid,
+																									{ sm: 3 },
+																									_react2.default.createElement(
+																													'li',
+																													null,
+																													_react2.default.createElement(
+																																	'a',
+																																	{ href: 'http://acgn-moemoe.tw/2015/10/12/exhentai%E7%B6%B2%E7%AB%99%E4%B8%8B%E8%BC%89%E5%99%A8beta/' },
+																																	_react2.default.createElement(Image, { className: 'thumbnail', src: 'assets/images/works-Hentai.jpg', thumbnail: true, radius: true }),
+																																	_react2.default.createElement(
+																																					'span',
+																																					{ className: 'block padding' },
+																																					this.props._('works_1')
+																																	)
+																													)
+																									),
+																									_react2.default.createElement(
+																													'li',
+																													null,
+																													_react2.default.createElement(
+																																	'a',
+																																	{ href: 'https://github.com/a9650615/myownrpg' },
+																																	_react2.default.createElement(Image, { className: 'thumbnail', src: 'assets/images/works-rpg.jpg', thumbnail: true, radius: true }),
+																																	_react2.default.createElement(
+																																					'span',
+																																					{ className: 'block padding' },
+																																					this.props._('works_2')
+																																	)
+																													)
+																									),
+																									_react2.default.createElement(
+																													'li',
+																													null,
+																													_react2.default.createElement(
+																																	'a',
+																																	{ href: 'https://github.com/a9650615/TaiKu' },
+																																	_react2.default.createElement(Image, { className: 'thumbnail', src: 'assets/images/works-TaiKu.jpg', thumbnail: true, radius: true }),
+																																	_react2.default.createElement(
+																																					'span',
+																																					{ className: 'block padding' },
+																																					this.props._('works_3')
+																																	)
+																													)
+																									)
+																					),
+																					_react2.default.createElement(
+																									'h3',
+																									{ className: 'font-title2' },
+																									this.props._('works_want_to_do')
+																					),
+																					_react2.default.createElement(
+																									'span',
+																									{ className: 'block padding' },
+																									this.props._('works_content')
+																					)
+																	)
+													);
+									}
+					}]);
+
+					return WorkContent;
 	}(_react2.default.Component);
 
 	exports.default = WorkContent;
+
+/***/ },
+/* 250 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
+	    value: true
+	});
+
+	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+	var _react = __webpack_require__(2);
+
+	var _react2 = _interopRequireDefault(_react);
+
+	var _amazeuiReact = __webpack_require__(160);
+
+	var _amazeuiReact2 = _interopRequireDefault(_amazeuiReact);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+	var Container = _amazeuiReact2.default.Container,
+	    AvgGrid = _amazeuiReact2.default.AvgGrid,
+	    Image = _amazeuiReact2.default.Image;
+
+	var Members = function (_React$Component) {
+	    _inherits(Members, _React$Component);
+
+	    function Members(props) {
+	        _classCallCheck(this, Members);
+
+	        var _this = _possibleConstructorReturn(this, Object.getPrototypeOf(Members).call(this, props));
+
+	        _this.displayName = 'Members';
+	        return _this;
+	    }
+
+	    _createClass(Members, [{
+	        key: 'render',
+	        value: function render() {
+	            return _react2.default.createElement(
+	                'div',
+	                { id: 'members-block', className: 'main-block' },
+	                _react2.default.createElement(
+	                    Container,
+	                    null,
+	                    _react2.default.createElement(
+	                        'h2',
+	                        { className: 'font-title' },
+	                        this.props._('members_title')
+	                    ),
+	                    _react2.default.createElement(
+	                        AvgGrid,
+	                        { sm: 3 },
+	                        _react2.default.createElement(
+	                            'li',
+	                            null,
+	                            _react2.default.createElement(Image, { className: 'thumbnail', src: 'assets/images/JB.jpg', circle: true }),
+	                            _react2.default.createElement(
+	                                'span',
+	                                { className: 'block padding' },
+	                                this.props._('member_JB')
+	                            )
+	                        ),
+	                        _react2.default.createElement(
+	                            'li',
+	                            null,
+	                            _react2.default.createElement(Image, { className: 'thumbnail', src: 'assets/images/WJ.jpg', circle: true }),
+	                            _react2.default.createElement(
+	                                'span',
+	                                { className: 'block padding' },
+	                                this.props._('member_WJ')
+	                            )
+	                        ),
+	                        _react2.default.createElement(
+	                            'li',
+	                            null,
+	                            _react2.default.createElement(Image, { className: 'thumbnail', src: 'assets/images/MY.jpg', circle: true }),
+	                            _react2.default.createElement(
+	                                'span',
+	                                { className: 'block padding' },
+	                                this.props._('member_MY')
+	                            )
+	                        )
+	                    )
+	                )
+	            );
+	        }
+	    }]);
+
+	    return Members;
+	}(_react2.default.Component);
+
+	exports.default = Members;
 
 /***/ }
 /******/ ]);

@@ -24,6 +24,9 @@
 .font-title {
   font-size: 26px;
 }
+.font-title2 {
+  font-size: 19px;
+}
 .text-center {
   text-align: center;
 }
@@ -32,6 +35,32 @@
 }
 .padding {
   padding: 8px;
+}
+/*
+ * animate
+ */
+.cursor,
+.cursor-blink {
+  background-color: white;
+  width: 3px;
+  height: 50px;
+  top: 10px;
+  position: relative;
+  display: inline-block;
+  margin-left: 10px;
+}
+.cursor-blink {
+  animation: blink 1s infinite cubic-bezier(1, -0.04, 0.135, 0.98);
+}
+/*这里设置动画blink*/
+@keyframes blink {
+  0%,
+  100% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
 }
 body {
   font-family: DroidSans;
@@ -68,4 +97,12 @@ body #skill-block {
 }
 body #skill-block .thumbnail {
   display: inline-block;
+}
+body #members-block {
+  text-align: center;
+}
+body #works-block {
+  background: #2c3e50;
+  text-align: center;
+  color: white;
 }

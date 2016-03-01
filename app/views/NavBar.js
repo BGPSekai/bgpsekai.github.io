@@ -6,7 +6,8 @@ let Nav = AMUI.Nav,
   Topbar = AMUI.Topbar,
   CollapsibleNav = AMUI.CollapsibleNav,
   NavItem = AMUI.NavItem,
-  Sticky = AMUI.Sticky;
+  Sticky = AMUI.Sticky,
+  ScrollSpyNav = AMUI.ScrollSpyNav;
 
 
 export default class NavBar extends React.Component {
