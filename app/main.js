@@ -25,9 +25,14 @@ class Index extends React.Component {
 	    	<NavBar _={_}/>
 	    </Sticky>
 	    <Grid className="doc-g">
-	      <Container className=".am-container">
-	        <Col sm={12}>{_('just_do_it')}</Col>
-	      </Container>
+	      <div id="nav_img"></div>
+	      <div className="navholder table block fill">
+	      	<Container className="table_cell center">
+	      	  <Col sm={12}>
+	      	  	<p id="title">{_('just_do_it')}</p>
+	      	  </Col>
+	      	</Container>
+	      </div>
 	    </Grid>
 	  </div>
     );

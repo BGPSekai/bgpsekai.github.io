@@ -17,7 +17,7 @@ export default class NavBar extends React.Component {
 		    <Topbar brand={this.props._('site_title')} toggleNavKey="nav">
 		       <CollapsibleNav eventKey="nav">
 		        <Nav topbar>
-		          <NavItem href="#title" active={true}>{this.props._('site_title')}</NavItem>
+		          <NavItem href="#title" active={true}>{this.props._('site_index')}</NavItem>
 		          <NavItem href="#about">{this.props._('site_about')}</NavItem>
 		        </Nav>
 		      </CollapsibleNav>

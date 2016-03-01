@@ -96,47 +96,56 @@
 	    Container = _amazeuiReact2.default.Container;
 
 	var Index = function (_React$Component) {
-	  _inherits(Index, _React$Component);
+			_inherits(Index, _React$Component);
 
-	  function Index() {
-	    _classCallCheck(this, Index);
+			function Index() {
+					_classCallCheck(this, Index);
 
-	    return _possibleConstructorReturn(this, Object.getPrototypeOf(Index).apply(this, arguments));
-	  }
+					return _possibleConstructorReturn(this, Object.getPrototypeOf(Index).apply(this, arguments));
+			}
 
-	  _createClass(Index, [{
-	    key: 'render',
-	    value: function render() {
-	      return _react2.default.createElement(
-	        'div',
-	        { id: 'root' },
-	        _react2.default.createElement(
-	          Sticky,
-	          { top: 0 },
-	          _react2.default.createElement(_Navbar2.default, { _: _ })
-	        ),
-	        _react2.default.createElement(
-	          Grid,
-	          { className: 'doc-g' },
-	          _react2.default.createElement(
-	            Container,
-	            { className: '.am-container' },
-	            _react2.default.createElement(
-	              Col,
-	              { sm: 12 },
-	              _('just_do_it')
-	            )
-	          )
-	        )
-	      );
-	    }
-	  }]);
+			_createClass(Index, [{
+					key: 'render',
+					value: function render() {
+							return _react2.default.createElement(
+									'div',
+									{ id: 'root' },
+									_react2.default.createElement(
+											Sticky,
+											{ top: 0 },
+											_react2.default.createElement(_Navbar2.default, { _: _ })
+									),
+									_react2.default.createElement(
+											Grid,
+											{ className: 'doc-g' },
+											_react2.default.createElement('div', { id: 'nav_img' }),
+											_react2.default.createElement(
+													'div',
+													{ className: 'navholder table block fill' },
+													_react2.default.createElement(
+															Container,
+															{ className: 'table_cell center' },
+															_react2.default.createElement(
+																	Col,
+																	{ sm: 12 },
+																	_react2.default.createElement(
+																			'p',
+																			{ id: 'title' },
+																			_('just_do_it')
+																	)
+															)
+													)
+											)
+									)
+							);
+					}
+			}]);
 
-	  return Index;
+			return Index;
 	}(_react2.default.Component);
 
 	_L10nManager2.default.init(function () {
-	  _reactDom2.default.render(_react2.default.createElement(Index, null), document.getElementById('root'));
+			_reactDom2.default.render(_react2.default.createElement(Index, null), document.getElementById('root'));
 	});
 
 /***/ },
@@ -29600,7 +29609,7 @@
 								_react2.default.createElement(
 									NavItem,
 									{ href: '#title', active: true },
-									this.props._('site_title')
+									this.props._('site_index')
 								),
 								_react2.default.createElement(
 									NavItem,

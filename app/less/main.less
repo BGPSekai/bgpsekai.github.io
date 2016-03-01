@@ -4,4 +4,35 @@
 
 body{
 	@load_default_font();
+
+	.block{
+		min-height: @min-block-height;
+	}
+
+	#nav_img{
+		background: url(@nav_image);
+		background-size: cover;
+		background-position: center;
+		.fill;
+		height: @nav_height;
+		position: absolute;
+	}
+
+	.navholder{
+		margin: auto;
+		color: white;
+		height: @nav_height;
+		position: relative;
+
+		#title{
+			font-size: 50px;
+			font-weight: 100;
+			text-shadow: 0 0 10px #000;
+			letter-spacing: 2px;
+			color: #fff;
+			margin-bottom: 32px;
+		}
+
+	}
+
 }
