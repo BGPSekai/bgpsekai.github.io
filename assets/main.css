@@ -17,11 +17,28 @@
   vertical-align: middle;
   margin: 0 auto;
 }
+.thumbnail {
+  max-width: 180px;
+  width: 70%;
+}
+.font-title {
+  font-size: 26px;
+}
+.text-center {
+  text-align: center;
+}
+.block {
+  display: block;
+}
+.padding {
+  padding: 8px;
+}
 body {
   font-family: DroidSans;
 }
-body .block {
+body .main-block {
   min-height: 300px;
+  padding: 20px 0;
 }
 body #nav_img {
   background: url('/assets/images/navbar.jpeg');
@@ -45,4 +62,10 @@ body .navholder #title {
   letter-spacing: 2px;
   color: #fff;
   margin-bottom: 32px;
+}
+body #skill-block {
+  text-align: center;
+}
+body #skill-block .thumbnail {
+  display: inline-block;
 }

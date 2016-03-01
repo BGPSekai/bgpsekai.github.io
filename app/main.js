@@ -6,6 +6,8 @@ import L10nManager from './modules/L10nManager';
 
 //Views
 import NavBar from './views/Navbar.js';
+import WorkContent from './views/WorkContent.js';
+
 
 var _ = L10nManager.get.bind(L10nManager);
 
@@ -26,7 +28,7 @@ class Index extends React.Component {
 	    </Sticky>
 	    <Grid className="doc-g">
 	      <div id="nav_img"></div>
-	      <div className="navholder table block fill">
+	      <div className="navholder table main-block fill">
 	      	<Container className="table_cell center">
 	      	  <Col sm={12}>
 	      	  	<p id="title">{_('just_do_it')}</p>
@@ -34,6 +36,7 @@ class Index extends React.Component {
 	      	</Container>
 	      </div>
 	    </Grid>
+	    <WorkContent _={_}/>
 	  </div>
     );
   }

@@ -75,6 +75,10 @@
 
 	var _Navbar2 = _interopRequireDefault(_Navbar);
 
+	var _WorkContent = __webpack_require__(248);
+
+	var _WorkContent2 = _interopRequireDefault(_WorkContent);
+
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -121,7 +125,7 @@
 											_react2.default.createElement('div', { id: 'nav_img' }),
 											_react2.default.createElement(
 													'div',
-													{ className: 'navholder table block fill' },
+													{ className: 'navholder table main-block fill' },
 													_react2.default.createElement(
 															Container,
 															{ className: 'table_cell center' },
@@ -136,7 +140,8 @@
 															)
 													)
 											)
-									)
+									),
+									_react2.default.createElement(_WorkContent2.default, { _: _ })
 							);
 					}
 			}]);
@@ -29628,6 +29633,105 @@
 
 	exports.default = NavBar;
 	;
+
+/***/ },
+/* 248 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
+		value: true
+	});
+
+	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+	var _react = __webpack_require__(2);
+
+	var _react2 = _interopRequireDefault(_react);
+
+	var _amazeuiReact = __webpack_require__(160);
+
+	var _amazeuiReact2 = _interopRequireDefault(_amazeuiReact);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+	var Container = _amazeuiReact2.default.Container,
+	    AvgGrid = _amazeuiReact2.default.AvgGrid,
+	    Image = _amazeuiReact2.default.Image;
+
+	var WorkContent = function (_React$Component) {
+		_inherits(WorkContent, _React$Component);
+
+		function WorkContent() {
+			_classCallCheck(this, WorkContent);
+
+			return _possibleConstructorReturn(this, Object.getPrototypeOf(WorkContent).apply(this, arguments));
+		}
+
+		_createClass(WorkContent, [{
+			key: 'render',
+			value: function render() {
+				return _react2.default.createElement(
+					'div',
+					{ id: 'skill-block', className: 'main-block' },
+					_react2.default.createElement(
+						Container,
+						null,
+						_react2.default.createElement(
+							'h2',
+							{ className: 'font-title' },
+							this.props._('skill_title')
+						),
+						_react2.default.createElement(
+							AvgGrid,
+							{ sm: 3 },
+							_react2.default.createElement(
+								'li',
+								null,
+								_react2.default.createElement(Image, { className: 'thumbnail', src: 'assets/images/js_icon.jpeg', circle: true }),
+								_react2.default.createElement(
+									'span',
+									{ className: 'block padding' },
+									'Javascript + Nodejs'
+								)
+							),
+							_react2.default.createElement(
+								'li',
+								null,
+								_react2.default.createElement(Image, { className: 'thumbnail', src: 'assets/images/laravel_icon.png', circle: true }),
+								_react2.default.createElement(
+									'span',
+									{ className: 'block padding' },
+									'Laravel'
+								)
+							),
+							_react2.default.createElement(
+								'li',
+								null,
+								_react2.default.createElement(Image, { className: 'thumbnail', src: 'assets/images/more-icon.svg', circle: true }),
+								_react2.default.createElement(
+									'span',
+									{ className: 'block padding' },
+									this.props._('skill_more')
+								)
+							)
+						)
+					)
+				);
+			}
+		}]);
+
+		return WorkContent;
+	}(_react2.default.Component);
+
+	exports.default = WorkContent;
 
 /***/ }
 /******/ ]);
