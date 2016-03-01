@@ -123,7 +123,7 @@
 							return _react2.default.createElement(
 									'div',
 									{ id: 'root' },
-									_react2.default.createElement(Topbar, { id: 'topbar', brand: _('just_do_it') }),
+									_react2.default.createElement(Topbar, { id: 'topbar', brand: _('site_title') }),
 									_react2.default.createElement(
 											Grid,
 											{ className: 'doc-g' },
@@ -29609,7 +29609,8 @@
 	    NavItem = _amazeuiReact2.default.NavItem,
 	    Sticky = _amazeuiReact2.default.Sticky,
 	    ScrollSpyNav = _amazeuiReact2.default.ScrollSpyNav,
-	    Container = _amazeuiReact2.default.Container;
+	    Container = _amazeuiReact2.default.Container,
+	    AvgGrid = _amazeuiReact2.default.AvgGrid;
 
 	var NavBar = function (_React$Component) {
 		_inherits(NavBar, _React$Component);
@@ -29650,8 +29651,8 @@
 								Container,
 								null,
 								_react2.default.createElement(
-									'ul',
-									{ className: 'topbar-nav' },
+									AvgGrid,
+									{ sm: 4, className: 'topbar-nav' },
 									_react2.default.createElement(
 										'li',
 										null,

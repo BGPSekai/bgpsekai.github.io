@@ -86,9 +86,14 @@ body .scrollspy-nav ul li {
   list-style: none;
 }
 body .scrollspy-nav ul li a {
+  display: block;
+  width: 100%;
   line-height: 50px;
-  padding: 13px 13px;
+  padding: 2px 13px;
   color: white;
+  text-align: center;
+  vertical-align: middle;
+  margin: 0 auto;
 }
 body .scrollspy-nav ul li a.am-active {
   background: #0e90d2;

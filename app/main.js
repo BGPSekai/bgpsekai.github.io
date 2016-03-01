@@ -25,7 +25,7 @@ class Index extends React.Component {
   render() {
     return (
 	  <div id="root">
-	    <Topbar id="topbar" brand={_('just_do_it')}>
+	    <Topbar id="topbar" brand={_('site_title')}>
 	    </Topbar>
 	    <Grid className="doc-g">
 	      <div id="nav_img"></div>

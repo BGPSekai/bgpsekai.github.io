@@ -8,7 +8,8 @@ let Nav = AMUI.Nav,
   NavItem = AMUI.NavItem,
   Sticky = AMUI.Sticky,
   ScrollSpyNav = AMUI.ScrollSpyNav,
-  Container = AMUI.Container;
+  Container = AMUI.Container,
+  AvgGrid = AMUI.AvgGrid;
 
 
 export default class NavBar extends React.Component {
@@ -31,12 +32,12 @@ export default class NavBar extends React.Component {
 		  <ScrollSpyNav offsetTop={70}>
 		  	<Nav className="scrollspy-nav" data-am-sticky>
 		  	  <Container>
-		  	  	<ul className="topbar-nav">
+		  	  	<AvgGrid sm={4} className="topbar-nav">
 		  	      <li><a href="#nav_img">頁首</a></li>
 		  	      <li><a href="#skill-block">技能</a></li>
 		  	      <li><a href="#works-block">作品</a></li>
 		  	      <li><a href="#members-block">成員</a></li>
-		  	    </ul>
+		  	    </AvgGrid>
 		  	  </Container>
 		  	</Nav>
 		  </ScrollSpyNav>
