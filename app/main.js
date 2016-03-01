@@ -17,6 +17,7 @@ let Grid = AMUI.Grid,
   Nav = AMUI.Nav,
   NavItem = AMUI.NavItem,
   Sticky = AMUI.Sticky,
+  Topbar = AMUI.Topbar,
   Container = AMUI.Container;
 
 class Index extends React.Component {
@@ -24,9 +25,8 @@ class Index extends React.Component {
   render() {
     return (
 	  <div id="root">
-	  	<Sticky top={0}>
-	    	<NavBar _={_}/>
-	    </Sticky>
+	    <Topbar id="topbar" brand={_('just_do_it')}>
+	    </Topbar>
 	    <Grid className="doc-g">
 	      <div id="nav_img"></div>
 	      <div className="navholder table main-block fill">
@@ -37,6 +37,7 @@ class Index extends React.Component {
 	      	</Container>
 	      </div>
 	    </Grid>
+	    <NavBar _={_}/>
 	    <SkillContent _={_}/>
 	    <WorkContent _={_}/>
 	    <Members _={_}/>

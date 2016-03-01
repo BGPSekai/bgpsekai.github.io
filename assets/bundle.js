@@ -105,6 +105,7 @@
 	    Nav = _amazeuiReact2.default.Nav,
 	    NavItem = _amazeuiReact2.default.NavItem,
 	    Sticky = _amazeuiReact2.default.Sticky,
+	    Topbar = _amazeuiReact2.default.Topbar,
 	    Container = _amazeuiReact2.default.Container;
 
 	var Index = function (_React$Component) {
@@ -122,11 +123,7 @@
 							return _react2.default.createElement(
 									'div',
 									{ id: 'root' },
-									_react2.default.createElement(
-											Sticky,
-											{ top: 0 },
-											_react2.default.createElement(_Navbar2.default, { _: _ })
-									),
+									_react2.default.createElement(Topbar, { id: 'topbar', brand: _('just_do_it') }),
 									_react2.default.createElement(
 											Grid,
 											{ className: 'doc-g' },
@@ -150,6 +147,7 @@
 													)
 											)
 									),
+									_react2.default.createElement(_Navbar2.default, { _: _ }),
 									_react2.default.createElement(_SkillContent2.default, { _: _ }),
 									_react2.default.createElement(_WorkContent2.default, { _: _ }),
 									_react2.default.createElement(_Members2.default, { _: _ }),
@@ -29610,7 +29608,8 @@
 	    CollapsibleNav = _amazeuiReact2.default.CollapsibleNav,
 	    NavItem = _amazeuiReact2.default.NavItem,
 	    Sticky = _amazeuiReact2.default.Sticky,
-	    ScrollSpyNav = _amazeuiReact2.default.ScrollSpyNav;
+	    ScrollSpyNav = _amazeuiReact2.default.ScrollSpyNav,
+	    Container = _amazeuiReact2.default.Container;
 
 	var NavBar = function (_React$Component) {
 		_inherits(NavBar, _React$Component);
@@ -29623,28 +29622,72 @@
 
 		_createClass(NavBar, [{
 			key: 'render',
+
+
+			/*
+	  <Sticky>
+	    <Topbar brand={this.props._('site_title')} toggleNavKey="nav">
+	       <CollapsibleNav eventKey="nav">
+	        <Nav topbar>
+	          <NavItem href="#title" active={true}>{this.props._('site_index')}</NavItem>
+	          <NavItem href="#about">{this.props._('site_about')}</NavItem>
+	        </Nav>
+	      </CollapsibleNav>
+	    </Topbar>
+	  </Sticky>
+	  */
 			value: function render() {
 				return _react2.default.createElement(
 					Sticky,
 					null,
 					_react2.default.createElement(
-						Topbar,
-						{ brand: this.props._('site_title'), toggleNavKey: 'nav' },
+						ScrollSpyNav,
+						{ offsetTop: 70 },
 						_react2.default.createElement(
-							CollapsibleNav,
-							{ eventKey: 'nav' },
+							Nav,
+							{ className: 'scrollspy-nav', 'data-am-sticky': true },
 							_react2.default.createElement(
-								Nav,
-								{ topbar: true },
+								Container,
+								null,
 								_react2.default.createElement(
-									NavItem,
-									{ href: '#title', active: true },
-									this.props._('site_index')
-								),
-								_react2.default.createElement(
-									NavItem,
-									{ href: '#about' },
-									this.props._('site_about')
+									'ul',
+									{ className: 'topbar-nav' },
+									_react2.default.createElement(
+										'li',
+										null,
+										_react2.default.createElement(
+											'a',
+											{ href: '#nav_img' },
+											'頁首'
+										)
+									),
+									_react2.default.createElement(
+										'li',
+										null,
+										_react2.default.createElement(
+											'a',
+											{ href: '#skill-block' },
+											'技能'
+										)
+									),
+									_react2.default.createElement(
+										'li',
+										null,
+										_react2.default.createElement(
+											'a',
+											{ href: '#works-block' },
+											'作品'
+										)
+									),
+									_react2.default.createElement(
+										'li',
+										null,
+										_react2.default.createElement(
+											'a',
+											{ href: '#members-block' },
+											'成員'
+										)
+									)
 								)
 							)
 						)
